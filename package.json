@@ -1,0 +1,22 @@
+{
+  "name": "domino",
+  "description": "test task",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "angular": "^1.8.2",
+    "browser-sync": "^2.26.14",
+    "fabric": "^4.3.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "angular-material": "^1.2.2",
+    "angular-animate": "^1.8.2",
+    "angular-aria": "^1.8.2",
+    "angular-messages": "^1.8.2"
+  }
+}
