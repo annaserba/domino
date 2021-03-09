@@ -30,7 +30,7 @@ const positions = [{
   }
 ];
 
-const AddNewDomino = (top, left, point) => {
+const addNewDomino = (top, left, point) => {
   const domino = [];
   const square = new fabric.Rect({
     top: top,
@@ -109,12 +109,12 @@ const showAllDomino = (canvas, $scope) => {
   const groups = [];
   for (let index = 0; index < 7; index++) {
     groups.push({
-      domino: AddNewDomino(100, index * 100, index + 1),
+      domino: addNewDomino(100, index * 100, index + 1),
       position: "Top",
       point: index + 1
     });
     groups.push({
-      domino: AddNewDomino(170, index * 100, index + 1),
+      domino: addNewDomino(170, index * 100, index + 1),
       position: "Bottom",
       point: index + 1
     });
@@ -133,8 +133,8 @@ app.controller("DominoController", ($scope) => {
   const newDomino = new fabric.StaticCanvas('newDomino');
 
   let dominos = [];
-  let mainDominoGroupPart1 = AddNewDomino(100, 100, 1);
-  let mainDominoGroupPart2 = AddNewDomino(170, 100, 1);
+  let mainDominoGroupPart1 = addNewDomino(100, 100, 1);
+  let mainDominoGroupPart2 = addNewDomino(170, 100, 1);
   let mainDominoGroup = new fabric.Group([
     mainDominoGroupPart1,
     mainDominoGroupPart2
@@ -229,7 +229,7 @@ app.controller("DominoController", ($scope) => {
   $scope.changeDomino = (data) => {
     if (data.position == "Top") {
       currentDomino.remove(mainDominoGroup);
-      mainDominoGroupPart1 = AddNewDomino(100, 100, data.point);
+      mainDominoGroupPart1 = addNewDomino(100, 100, data.point);
       mainDominoGroupPart2.top = 170;
       mainDominoGroupPart2.left = 100;
       mainDominoGroup = new fabric.Group([
@@ -240,7 +240,7 @@ app.controller("DominoController", ($scope) => {
     }
     if (data.position == "Bottom") {
       currentDomino.remove(mainDominoGroup);
-      mainDominoGroupPart2 = AddNewDomino(170, 100, data.point);
+      mainDominoGroupPart2 = addNewDomino(170, 100, data.point);
       mainDominoGroupPart1.top = 100;
       mainDominoGroupPart1.left = 100;
       mainDominoGroup = new fabric.Group([
