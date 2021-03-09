@@ -9,6 +9,8 @@ body {
 
 .md-button {
   min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px 20px; }
 
@@ -17,7 +19,11 @@ body {
   max-width: 300px; }
 
 .domino {
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.md-thumb-container {
+.md-thumb-container, .md-track-container {
   cursor: pointer; }
+
+.md-thumb-text {
+  user-select: none; }
