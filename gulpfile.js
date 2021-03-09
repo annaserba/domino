@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 
-function javascript(cb) {
+function javascript() {
   return src('src/**/*.js')
     .pipe(babel())
     .pipe(dest('dist/'))
@@ -19,7 +19,7 @@ function javascript(cb) {
     .pipe(dest('./dist/'));
 }
 
-function css(cb) {
+function css() {
   return src('src/**/*.scss')
     .pipe(sass())
     .pipe(dest('./dist/'))
